@@ -41,8 +41,9 @@ public class TracerFilter implements Filter {
       final FilterChain filterChain) throws IOException, ServletException {
     final HttpServletRequest req = (HttpServletRequest) servletRequest;
 
-    final String contextPath = req.getContextPath();
-    final String requestDispatcherPath = (String) req.getAttribute(DISPATCHER_REQUEST_PATH_ATTR);
+    final String contextPath = req.getContextPath() != null ? req.getContextPath() : "";
+    final String requestDispatcherPath = req.getAttribute(DISPATCHER_REQUEST_PATH_ATTR) != null ? (String) req
+        .getAttribute(DISPATCHER_REQUEST_PATH_ATTR) : req.getRequestURI();
 
     final String path = contextPath + requestDispatcherPath;
     System.out.println("path : " + path);
