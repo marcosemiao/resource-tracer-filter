@@ -28,7 +28,8 @@ public class TracerFilter implements Filter {
     final String contextPath = req.getContextPath();
     final String requestDispatcherPath = (String) req.getAttribute(DISPATCHER_REQUEST_PATH_ATTR);
 
-    System.out.println("path : " + contextPath + requestDispatcherPath);
+    final String path = contextPath + requestDispatcherPath;
+    System.out.println("path : " + path);
 
     filterChain.doFilter(servletRequest, servletResponse);
   }
