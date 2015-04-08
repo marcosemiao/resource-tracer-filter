@@ -3,10 +3,14 @@
 
 	<groupId>com.github.marcosemiao</groupId>
 	<artifactId>resource-tracer-filter</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 
 	<name>Resource Tracer Filter</name>
 
+	<description>Filter web to trace all resources</description>
+
+	<url>https://github.com/marcosemiao/resource-tracer-filter</url>
+	
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
